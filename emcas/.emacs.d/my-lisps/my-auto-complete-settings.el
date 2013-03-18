@@ -1,0 +1,8 @@
+(add-to-list 'load-path "~/.emacs.d/auto-complete-1.3.1")
+(add-to-list 'load-path "~/.emacs.d/auto-complete-1.3.1/dict")
+(require 'auto-complete-config)
+(ac-config-default)
+(global-auto-complete-mode t)
+(setq ac-auto-start 2)
+(setq ac-ignore-case nil)
+(provide 'my-auto-complete-settings)

@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: def $. end
+# --
+def ${method_name}
+  $0
+end

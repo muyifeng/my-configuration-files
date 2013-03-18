@@ -1,0 +1,62 @@
+# This is my slate configuration file. (about slate, see https://github.com/jigish/slate)
+# How to use:
+#  rename this file to '.slate' and move it to your home foler '~/', then relunch slate
+
+config defaultToCurrentScreen true
+config nudgePercentOf screenSize
+config resizePercentOf screenSize
+
+# Resize Bindings
+# bind right:shift;ctrl        resize +10% +0                             # Increase 10% width of the window from the right
+# bind left:shift;ctrl         resize -10% +0                             # Decrease 10% width of the window from the right
+# bind up:shift;ctrl           resize +0   -10%                           # Decrease 10% width of the window from the bottom
+# bind down:shift;ctrl         resize +0   +10%                           # Increase 10% width of the window from the bottom
+# bind left:shift;alt          resize +10% +0 bottom-right                # Increase 10% width of the window from the left
+# bind right:shift;alt         resize -10% +0 bottom-right                # Decrease 10% width of the window from the left
+# bind up:shift;alt            resize +0   +10% bottom-right              # Increase 10% width of the window from the top
+# bind down:shift;alt          resize +0   -10% bottom-right              # Decrease 10% width of the window from the top
+
+# Push Bindings
+bind m:ctrl;alt;cmd           push up      bar-resize:screenSizeX       # Full screen
+
+bind left:ctrl;alt;cmd        push left    bar-resize:screenSizeX/2     # Half screen in the left
+bind right:ctrl;alt;cmd       push right   bar-resize:screenSizeX/2     # Half screen in the right
+bind up:ctrl;alt;cmd          push up      bar-resize:screenSizeY/2     # Half screen in the top
+bind down:ctrl;alt;cmd        push down    bar-resize:screenSizeY/2     # Half screen in the bottom
+
+bind left:ctrl;cmd            push left    bar-resize:screenSizeX/3     # One third screen in the left
+bind right:ctrl;cmd           push right   bar-resize:screenSizeX/3     # One third screen in the right
+bind up:ctrl;cmd              push up      bar-resize:screenSizeY/3     # One third screen in the top
+bind down:ctrl;cmd            push down    bar-resize:screenSizeY/3     # One third screen in the bottom
+
+# Nudge Bindings
+# bind right:shift;alt          nudge +10% +0             # Move window 10% width to the right
+# bind left:shift;alt           nudge -10% +0             # Move window 10% width to the left
+# bind up:shift;alt             nudge +0   -10%           # Move window 10% width to the top
+# bind down:shift;alt           nudge +0   +10%           # Move window 10% width to the bottom
+
+# Throw Bindings
+bind 1:ctrl;alt               throw 0 resize            # Throw window to first screen with resizing
+bind 2:ctrl;alt               throw 1 resize            # Throw window to second screen with resizing
+bind 3:ctrl;alt               throw 2 resize            # Throw window to third screen with resizing
+
+bind left:ctrl;alt            throw left  resize        # Throw window to left with resizing
+bind right:ctrl;alt           throw right resize        # Throw window to right with resizing
+bind up:ctrl;alt              throw up    resize        # Throw window to top with resizing
+bind down:ctrl;alt            throw down  resize        # Throw window to bottom with resizing
+
+# bind left:ctrl;alt            throw left                # Throw window to left without resizing
+# bind right:ctrl;alt           throw right               # Throw window to right without resizing
+# bind up:ctrl;alt              throw up                  # Throw window to top without resizing
+# bind down:ctrl;alt            throw down                # Throw window to bottom without resizing
+
+# Focus Bindings
+# bind right:alt    focus right
+# bind left:alt     focus left
+# bind up:alt       focus up
+# bind down:alt     focus down
+# bind up:cmd;alt   focus behind
+# bind down:cmd;alt focus behind
+
+# Window Hints
+bind esc:cmd hint
