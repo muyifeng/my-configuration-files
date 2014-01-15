@@ -1,13 +1,15 @@
-
-export PATH=/opt/local/bin:/opt/local/sbin:/usr/local/share/npm/bin:$PATH
+export ALTERNATE_EDITOR=""
+export PATH=/opt/local/bin:/opt/local/sbin:/usr/local/share/npm/bin:/usr/local/sbin:~/bin:$PATH
 export LC_ALL="en_US.UTF-8"
-
+export LANG=en_US.UTF-8
 
 # Finished adapting your PATH environment variable for use with MacPorts.
 
 export CLICOLOR=1
 export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 
+alias e="emacsclient"
+alias es="emacs"
 alias l="ls"
 alias la="ls -a"
 alias lg="ls -g"
@@ -41,12 +43,10 @@ alias mysql-stop="sudo /Library/StartupItems/MySQLCOM/MySQLCOM stop"
 alias mysql-restart="sudo /Library/StartupItems/MySQLCOM/MySQLCOM restart"
 
 #PS1='\n'$'\[\033[0m\033[33m\]\\t\[\033[0m\] '$'\[\033[0m\033[31m\]\u\[\033[0m\]'$':\[\033[0m\033[32m\]\w\[\033[0m\]$ '
-
+#PS1="$PS1"'$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#D" | tr -d %) "$PWD")'
 
 #autojump
-
-
-_autojump() 
+_autojump()
 {
         local cur
         cur=${COMP_WORDS[*]:1}
@@ -76,7 +76,7 @@ export AUTOJUMP_HOME=${HOME}
 AUTOJUMP='{ [[ "$AUTOJUMP_HOME" == "$HOME" ]] && (autojump -a "$(pwd -P)"&)>/dev/null 2>>${AUTOJUMP_DATA_DIR}/.autojump_errors;} 2>/dev/null'
 if [[ ! $PROMPT_COMMAND =~ autojump ]]; then
   export PROMPT_COMMAND="$AUTOJUMP ; ${PROMPT_COMMAND:-:}"
-fi 
+fi
 alias jumpstat="autojump --stat"
 function j { new_path="$(autojump $@)";if [ -n "$new_path" ]; then echo -e "\\033[31m${new_path}\\033[0m"; cd "$new_path";else false; fi }
 
@@ -84,3 +84,4 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
+[[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh

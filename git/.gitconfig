@@ -1,10 +1,7 @@
 [user]
-	name = muyifeng1988
+	name = Eric Yang
 	email = muyifeng1988@gmail.com
-[push]
-	default = current
 [core]
-	editor = vim
 	excludesfile = /Users/ericyang/.gitignore_global
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
@@ -12,4 +9,5 @@
 [mergetool "sourcetree"]
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
-
+[push]
+	default = current

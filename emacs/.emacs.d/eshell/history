@@ -1,0 +1,55 @@
+ls
+la
+ls
+ls
+ll
+ls -a
+ls
+touch metric_grid_serializer.rb
+ls
+cd ..
+cd controllers/
+ls
+touch metric_grids_controller.rb
+cd ../
+..
+cd lib/tasks/
+ls
+touch add_metric_dashboard.rake
+../..
+ls
+cd app/assets/javascripts/app/widgets/
+ls
+mkdir metric_dashboard
+cd metric_dashboard/
+mkdir templates
+ls
+touch metric_dashboard.js.coffee
+touch display_view.js.coffee
+touch edit_view.js.coffee
+ls
+cd templates/
+touch display_view.jst.skim
+ls
+cd ../..
+cd metric_dashboard/
+ls
+cd templates/
+ls
+touch edit_view.jst.skim
+ls
+cd ../../../../..
+../..
+cd lib/tasks/
+ls
+touch fix_project_grid_history_data.rake
+ls
+cd app/workers/
+ls
+touch clear_pcr_temp_files_worker.rb
+cd ../../../
+../
+ls
+cd models/
+ls
+touch metric_project_grid.rb
